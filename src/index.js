@@ -13,42 +13,50 @@ function App() {
     {
       name: 'Pasta Aglio e Olio',
       ingredients: ['pasta', 'garlic', 'olive oil', 'red pepper flakes', 'parsley'],
-      instructions: 'Boil pasta. Sauté garlic in olive oil. Add red pepper flakes. Toss with pasta and garnish with parsley.'
+      instructions: 'Boil pasta. Sauté garlic in olive oil. Add red pepper flakes. Toss with pasta and garnish with parsley.',
+      cookingTime: 20
     },
     {
       name: 'Scrambled Eggs',
       ingredients: ['eggs', 'butter', 'salt', 'pepper'],
-      instructions: 'Whisk eggs. Melt butter in pan. Cook eggs on low heat, stirring constantly.'
+      instructions: 'Whisk eggs. Melt butter in pan. Cook eggs on low heat, stirring constantly.',
+      cookingTime: 5
     },
     {
       name: 'Tomato Soup',
       ingredients: ['tomatoes', 'onion', 'garlic', 'vegetable broth', 'olive oil', 'salt', 'pepper'],
-      instructions: 'Sauté onion and garlic. Add tomatoes and broth. Simmer. Blend until smooth.'
+      instructions: 'Sauté onion and garlic. Add tomatoes and broth. Simmer. Blend until smooth.',
+      cookingTime: 30
     },
     {
       name: 'Grilled Cheese Sandwich',
       ingredients: ['bread', 'cheese', 'butter'],
-      instructions: 'Butter bread. Add cheese between slices. Grill until golden and cheese melts.'
+      instructions: 'Butter bread. Add cheese between slices. Grill until golden and cheese melts.',
+      cookingTime: 10
     },
     {
       name: 'Avocado Toast',
       ingredients: ['bread', 'avocado', 'salt', 'pepper', 'olive oil'],
-      instructions: 'Toast bread. Mash avocado with salt, pepper, and olive oil. Spread on toast.'
+      instructions: 'Toast bread. Mash avocado with salt, pepper, and olive oil. Spread on toast.',
+      cookingTime: 5
     },
     {
       name: 'Vegetable Stir Fry',
       ingredients: ['rice', 'bell pepper', 'broccoli', 'carrot', 'soy sauce', 'garlic', 'ginger', 'vegetable oil'],
-      instructions: 'Cook rice. Stir fry vegetables with garlic and ginger. Add soy sauce. Serve over rice.'
+      instructions: 'Cook rice. Stir fry vegetables with garlic and ginger. Add soy sauce. Serve over rice.',
+      cookingTime: 25
     },
     {
       name: 'Banana Smoothie',
       ingredients: ['banana', 'milk', 'yogurt', 'honey', 'ice'],
-      instructions: 'Blend all ingredients until smooth.'
+      instructions: 'Blend all ingredients until smooth.',
+      cookingTime: 3
     },
     {
       name: 'Guacamole',
       ingredients: ['avocado', 'onion', 'tomato', 'lime', 'salt', 'cilantro', 'garlic'],
-      instructions: 'Mash avocados. Mix in diced onion, tomato, minced garlic, lime juice, salt, and cilantro.'
+      instructions: 'Mash avocados. Mix in diced onion, tomato, minced garlic, lime juice, salt, and cilantro.',
+      cookingTime: 15
     }
   ];
 
@@ -166,6 +174,9 @@ function App() {
             {recipes.map((recipe, index) => (
               <div className="recipe-card" key={index}>
                 <h3>{recipe.name}</h3>
+                <div className="cooking-time">
+                  <span className="time-label">⏱️ Cooking Time:</span> {recipe.cookingTime} minutes
+                </div>
                 <div className="recipe-ingredients">
                   <h4>Ingredients:</h4>
                   <ul>
